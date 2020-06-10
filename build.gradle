@@ -17,6 +17,8 @@ minecraft {
 
 repositories {
     maven { url = "http://maven.fabricmc.net/" }
+
+    //maven { url 'https://maven.blamejared.com' }
 }
 
 dependencies {
@@ -29,6 +31,11 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+    modImplementation "io.github.prospector:modmenu:1.12.0+build.14"
+
+    //compileOnly fg.deobf("vazkii.patchouli:Patchouli:[VERSION]:api")
+    //runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:[VERSION]")
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
